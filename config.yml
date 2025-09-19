@@ -102,6 +102,10 @@ opening_books:
        - b
        - lowpro
        - probook
+       - 6
+       - 8 
+       - 11
+       
    standard_black:
      selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
      names:                              # List of names of books to use as black.
@@ -111,6 +115,11 @@ opening_books:
        - probook
        - small 
        - nimas
+       - 6
+       - 8 
+       - 11
+
+       
     0.5+0_white:                          # 30 sec bullet games (0.5+0)
       selection: best_move
       max_depth: 20                    # Limit book depth so engine evaluates positions
@@ -118,6 +127,10 @@ opening_books:
         - nimas
         - lowpro
         - probook
+        - 6
+         
+        - 8 
+        - 11
     0.5+0_black:                          # 30 sec bullet games (0.5+0)
       selection: best_move
       names:
@@ -125,18 +138,27 @@ opening_books:
         - probook
         - n
         - b
+        - 6
+        - 8 
+        - 11
     bullet_white:                            # Other bullet games (1+0)
       selection: weighted_random
       max_depth: 20                    # Limit book depth so engine evaluates positions
       names:
         - small
         - probook
+        - 6
+        - 8 
+        - 11
     bullet_black:                            # Aggressive black bullet setup
       selection: best_move                # Always play strongest moves as black
       max_depth: 15                    # Deeper book usage for black preparation
       names:
         - small
         - probook
+        - 6
+        - 8 
+        - 11
     3+0:                             # Blitz games (5+3)
       selection: weighted_random
       names:
@@ -475,6 +497,9 @@ books:
   black3check: "./books/black3check.bin"
   small: "./books/small.bin"
   nimas: "./books/nimas.bin"
+  6: "./books/6.bin"
+  8: "./books/8.bin"
+  11: "./books/11.bin"
 
 
 
