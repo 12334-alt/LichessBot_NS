@@ -99,13 +99,12 @@ gaviota:
 99|       selection: best_move
 100|       names:
 101|         - n
-             ...
-      - b
-      - lowpro
-      - probook
-      - 6
-      - 8
-      - 11
+103|         - b
+104|         - lowpro
+105|         - probook
+106|         - 6
+107|         - 8
+108|         - 11
 
     standard_black:
       selection: best_move
