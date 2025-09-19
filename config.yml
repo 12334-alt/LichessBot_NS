@@ -97,7 +97,7 @@ opening_books:
   books:
    bullet:
      selection: best_move         # Move selection is one of "weighted_random", "uniform_random" or "best_move".
-       names:                              # List of names of books to use in bullet.
+     names:                              # List of names of books to use in bullet.
        - n
        - b
        - lowpro
