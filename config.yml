@@ -91,8 +91,9 @@ gaviota:
   max_pieces: 5                           # Count of max pieces in the local gaviota endgame tablebases.
 
 opening_books:
-  enabled: true                           # Activate opening books.
-  priority: 400   # Whether to read the learn values from the books.
+  enabled: true        # Activate opening books.
+  priority: 400        # Priority level for book usage.
+# Whether to read the learn values from the books.
   read_learn: true 
   books:
   bullet:
