@@ -6,12 +6,12 @@ engines:
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 22.5        # Optimized for bullet games.
+    move_overhead_multiplier: 6.5        # Optimized for bullet games.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Increased threads for Threadripper power.
       Hash: 4096                           # Increased hash for better position evaluation.
       Move Overhead: 100                  # Reduced for faster bullet moves.
-    limits:                               # Limits that end the move calculation early.
+    limits:                               #  that end the move calculation early.
    #   depth: 28                          # Maximum search depth for bullet.
 
   chess960:                               # Engine used for standard chess and when no suitable special engine is configured.
@@ -95,25 +95,36 @@ opening_books:
   priority: 400                           # Priority with which this move source is used. Higher priority is used first.
   read_learn: false                       # Whether to read the learn values from the books.
   books:
-#   bullet:
-#     selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
-#     names:                              # List of names of books to use in bullet.
-#       - BulletBook
-#       - DefaultBook
-#   standard_black:
-#     selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
-#     names:                              # List of names of books to use as black.
-#       - BlackBook
+   bullet:
+     selection: best_move         # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+       names:                              # List of names of books to use in bullet.
+       - n
+       - b
+       - lowpro
+       - probook
+   standard_black:
+     selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+     names:                              # List of names of books to use as black.
+       - n
+       - b
+       - lowpro
+       - probook
+       - small 
+       - nimas
     0.5+0_white:                          # 30 sec bullet games (0.5+0)
-      selection: weighted_random
+      selection: best_move
       max_depth: 20                    # Limit book depth so engine evaluates positions
       names:
         - nimas
+        - lowpro
+        - probook
     0.5+0_black:                          # 30 sec bullet games (0.5+0)
       selection: best_move
       names:
         - lowpro
         - probook
+        - n
+        - b
     bullet_white:                            # Other bullet games (1+0)
       selection: weighted_random
       max_depth: 20                    # Limit book depth so engine evaluates positions
