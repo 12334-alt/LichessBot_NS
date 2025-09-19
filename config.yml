@@ -90,21 +90,21 @@ gaviota:
     - "/path/to/gaviota"
   max_pieces: 5                           # Count of max pieces in the local gaviota endgame tablebases.
 
-93| opening_books:
-94|   enabled: true
-95|   priority: 400
-96|   read_learn: true 
-97|   books:
-98|     bullet:
-99|       selection: best_move
-100|       names:
-101|         - n
-103|         - b
-104|         - lowpro
-105|         - probook
-106|         - 6
-107|         - 8
-108|         - 11
+opening_books:
+  enabled: true                           # Activate opening books.
+  priority: 400                           # Priority with which this move source is used. Higher priority is used first.
+  read_learn: false                       # Whether to read the learn values from the books.
+  books:
+    bullet:
+      selection: best_move
+      names:
+        - n
+        - b
+        - lowpro
+        - probook
+        - 6
+        - 8
+        - 11
 
     standard_black:
       selection: best_move
@@ -167,8 +167,6 @@ gaviota:
         - small
         - probook
   
-    # Priority with which this move source is used. Higher priority is used first.
-
     standard:                           
       selection: weighted_random
       names:
