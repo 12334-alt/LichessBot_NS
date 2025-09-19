@@ -503,6 +503,8 @@ books:
   6: "./books/6.bin"
   8: "./books/8.bin"
   11: "./books/11.bin"
+  n: "./books/n.bin"
+  b: "./books/b.bin"
 
 
 
